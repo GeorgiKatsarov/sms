@@ -31,7 +31,6 @@ namespace SMS_2._0
                 {
                     AdminView childForm = new AdminView();
                     childForm.Show();
-                    this.Hide();
                 }
                 else
                 {
@@ -43,5 +42,6 @@ namespace SMS_2._0
                 MessageBox.Show("Fill the information! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

@@ -27,6 +27,15 @@ namespace SMS_2._0
 
         }
 
-        
+        private void goBackBttn_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void refreshBttn_Click(object sender, EventArgs e)
+        {
+            AdminView childForm = new AdminView();
+            childForm.Show();
+            this.Close();
+        }
     }
 }
