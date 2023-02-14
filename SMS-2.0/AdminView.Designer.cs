@@ -36,18 +36,27 @@
             this.removeStockBttn = new System.Windows.Forms.Button();
             this.removeCashierBttn = new System.Windows.Forms.Button();
             this.StockDataGridView = new System.Windows.Forms.DataGridView();
-            this.CashierDataGridView = new System.Windows.Forms.DataGridView();
-            this.smsDataSet2 = new SMS_2._0.smsDataSet2();
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockTableAdapter = new SMS_2._0.smsDataSet2TableAdapters.stockTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CashierDataGridView = new System.Windows.Forms.DataGridView();
+            this.goBackBttn = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.smsDataSet2 = new SMS_2._0.smsDataSet2();
+            this.stockTableAdapter = new SMS_2._0.smsDataSet2TableAdapters.stockTableAdapter();
+            this.smsDataSet1 = new SMS_2._0.smsDataSet1();
+            this.cashiersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cashiersTableAdapter = new SMS_2._0.smsDataSet1TableAdapters.cashiersTableAdapter();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CashierDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smsDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smsDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smsDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cashiersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // addStockBttn
@@ -121,43 +130,6 @@
             this.StockDataGridView.Size = new System.Drawing.Size(703, 272);
             this.StockDataGridView.TabIndex = 8;
             // 
-            // CashierDataGridView
-            // 
-            this.CashierDataGridView.AllowUserToAddRows = false;
-            this.CashierDataGridView.AllowUserToDeleteRows = false;
-            this.CashierDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.CashierDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CashierDataGridView.Location = new System.Drawing.Point(216, 320);
-            this.CashierDataGridView.Name = "CashierDataGridView";
-            this.CashierDataGridView.ReadOnly = true;
-            this.CashierDataGridView.RowHeadersWidth = 62;
-            this.CashierDataGridView.RowTemplate.Height = 28;
-            this.CashierDataGridView.Size = new System.Drawing.Size(703, 272);
-            this.CashierDataGridView.TabIndex = 9;
-            // 
-            // smsDataSet2
-            // 
-            this.smsDataSet2.DataSetName = "smsDataSet2";
-            this.smsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stockBindingSource
-            // 
-            this.stockBindingSource.DataMember = "stock";
-            this.stockBindingSource.DataSource = this.smsDataSet2;
-            // 
-            // stockTableAdapter
-            // 
-            this.stockTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 150;
-            // 
             // Name
             // 
             this.Name.DataPropertyName = "name";
@@ -185,12 +157,107 @@
             this.Price.ReadOnly = true;
             this.Price.Width = 150;
             // 
+            // CashierDataGridView
+            // 
+            this.CashierDataGridView.AllowUserToAddRows = false;
+            this.CashierDataGridView.AllowUserToDeleteRows = false;
+            this.CashierDataGridView.AutoGenerateColumns = false;
+            this.CashierDataGridView.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.CashierDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CashierDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn});
+            this.CashierDataGridView.DataSource = this.cashiersBindingSource;
+            this.CashierDataGridView.Location = new System.Drawing.Point(216, 320);
+            this.CashierDataGridView.Name = "CashierDataGridView";
+            this.CashierDataGridView.ReadOnly = true;
+            this.CashierDataGridView.RowHeadersWidth = 62;
+            this.CashierDataGridView.RowTemplate.Height = 28;
+            this.CashierDataGridView.Size = new System.Drawing.Size(585, 272);
+            this.CashierDataGridView.TabIndex = 9;
+            // 
+            // goBackBttn
+            // 
+            this.goBackBttn.BackColor = System.Drawing.Color.AliceBlue;
+            this.goBackBttn.Location = new System.Drawing.Point(807, 479);
+            this.goBackBttn.Name = "goBackBttn";
+            this.goBackBttn.Size = new System.Drawing.Size(143, 113);
+            this.goBackBttn.TabIndex = 10;
+            this.goBackBttn.Text = "Go back";
+            this.goBackBttn.UseVisualStyleBackColor = false;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "stock";
+            this.stockBindingSource.DataSource = this.smsDataSet2;
+            // 
+            // smsDataSet2
+            // 
+            this.smsDataSet2.DataSetName = "smsDataSet2";
+            this.smsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
+            // 
+            // smsDataSet1
+            // 
+            this.smsDataSet1.DataSetName = "smsDataSet1";
+            this.smsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cashiersBindingSource
+            // 
+            this.cashiersBindingSource.DataMember = "cashiers";
+            this.cashiersBindingSource.DataSource = this.smsDataSet1;
+            // 
+            // cashiersTableAdapter
+            // 
+            this.cashiersTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First name";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.firstNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last name";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 150;
+            // 
             // AdminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(959, 615);
+            this.Controls.Add(this.goBackBttn);
             this.Controls.Add(this.CashierDataGridView);
             this.Controls.Add(this.StockDataGridView);
             this.Controls.Add(this.removeCashierBttn);
@@ -203,12 +270,13 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(981, 671);
             this.MinimumSize = new System.Drawing.Size(981, 671);
-            this.Text = "AdminView";
             this.Load += new System.EventHandler(this.AdminView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CashierDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.smsDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smsDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.smsDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cashiersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,5 +297,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.Button goBackBttn;
+        private smsDataSet1 smsDataSet1;
+        private System.Windows.Forms.BindingSource cashiersBindingSource;
+        private smsDataSet1TableAdapters.cashiersTableAdapter cashiersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
     }
 }

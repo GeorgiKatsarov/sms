@@ -118,14 +118,14 @@ namespace SMS_2._0
                 }
                 catch (Exception)
                 {
-                    return false;
                     MessageBox.Show("Wrong given information! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
             }
             else
             {
-                return false;
                 MessageBox.Show("Invalid inputs! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
         }

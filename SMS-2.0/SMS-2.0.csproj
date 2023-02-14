@@ -65,6 +65,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="smsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smsDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="smsDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +104,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="smsDataSet.xsc">
+      <DependentUpon>smsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smsDataSet.xss">
+      <DependentUpon>smsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet1.xsc">
+      <DependentUpon>smsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smsDataSet1.xss">
+      <DependentUpon>smsDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="smsDataSet2.xsc">
       <DependentUpon>smsDataSet2.xsd</DependentUpon>
     </None>

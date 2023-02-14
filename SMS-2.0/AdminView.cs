@@ -20,6 +20,8 @@ namespace SMS_2._0
 
         private void AdminView_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'smsDataSet1.cashiers' table. You can move, or remove it, as needed.
+            this.cashiersTableAdapter.Fill(this.smsDataSet1.cashiers);
             // TODO: This line of code loads data into the 'smsDataSet2.stock' table. You can move, or remove it, as needed.
             this.stockTableAdapter.Fill(this.smsDataSet2.stock);
 
