@@ -49,5 +49,17 @@ namespace SMS_2._0
             AddCashier childForm = new AddCashier();
             childForm.Show();
         }
+
+        private void removeCashierBttn_Click(object sender, EventArgs e)
+        {
+            RemoveCashier childForm = new RemoveCashier();
+            childForm.Show();
+        }
+
+        private void removeStockBttn_Click(object sender, EventArgs e)
+        {
+            RemoveStock removeStock = new RemoveStock();
+            removeStock.Show();
+        }
     }
 }

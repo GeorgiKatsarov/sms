@@ -47,7 +47,7 @@ namespace SMS_2._0
                 connection.Open();
                 return true;
             }
-            catch (MySqlException)
+            catch (Exception)
             {
 
                 MessageBox.Show("Cannot connect to server.  Contact administrator");
@@ -159,6 +159,51 @@ namespace SMS_2._0
             {
                 MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+        }
+
+        /// <summary>
+        /// This method is used for running different queries.
+        /// </summary>
+
+        public int RunIntResultQuery(string query)
+        {
+            int r1 = new int();
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                try
+                {
+                    // Create Command
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        int r = Convert.ToInt32(result);
+                        //close Connection
+                        this.CloseConnection();
+                        return r;
+                    }
+                    else
+                    {
+                        //close Connection
+                        this.CloseConnection();
+                        return r1;
+                    }
+                    
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return r1;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return r1;
+            }
+            
 
         }
     }

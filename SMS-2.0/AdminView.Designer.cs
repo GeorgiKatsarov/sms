@@ -100,6 +100,7 @@
             this.removeStockBttn.TabIndex = 6;
             this.removeStockBttn.Text = "Remove stock";
             this.removeStockBttn.UseVisualStyleBackColor = false;
+            this.removeStockBttn.Click += new System.EventHandler(this.removeStockBttn_Click);
             // 
             // removeCashierBttn
             // 
@@ -110,6 +111,7 @@
             this.removeCashierBttn.TabIndex = 7;
             this.removeCashierBttn.Text = "Remove cashier";
             this.removeCashierBttn.UseVisualStyleBackColor = false;
+            this.removeCashierBttn.Click += new System.EventHandler(this.removeCashierBttn_Click);
             // 
             // StockDataGridView
             // 
@@ -261,7 +263,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(981, 671);
             this.MinimumSize = new System.Drawing.Size(981, 671);
-            //this.Name = "AdminView";
+           /// this.Name = "AdminView";
             this.Load += new System.EventHandler(this.AdminView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
