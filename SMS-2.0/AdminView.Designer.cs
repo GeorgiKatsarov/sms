@@ -67,6 +67,7 @@
             this.addStockBttn.TabIndex = 0;
             this.addStockBttn.Text = "Add stock";
             this.addStockBttn.UseVisualStyleBackColor = false;
+            this.addStockBttn.Click += new System.EventHandler(this.addStockBttn_Click);
             // 
             // addCashierBttn
             // 
@@ -77,6 +78,7 @@
             this.addCashierBttn.TabIndex = 1;
             this.addCashierBttn.Text = "Add cashier";
             this.addCashierBttn.UseVisualStyleBackColor = false;
+            this.addCashierBttn.Click += new System.EventHandler(this.addCashierBttn_Click);
             // 
             // refreshBttn
             // 
@@ -259,6 +261,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(981, 671);
             this.MinimumSize = new System.Drawing.Size(981, 671);
+            //this.Name = "AdminView";
             this.Load += new System.EventHandler(this.AdminView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();

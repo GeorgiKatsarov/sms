@@ -37,5 +37,17 @@ namespace SMS_2._0
             childForm.Show();
             this.Close();
         }
+
+        private void addStockBttn_Click(object sender, EventArgs e)
+        {
+            AddStock childForm = new AddStock();
+            childForm.Show();
+        }
+
+        private void addCashierBttn_Click(object sender, EventArgs e)
+        {
+            AddCashier childForm = new AddCashier();
+            childForm.Show();
+        }
     }
 }
