@@ -43,5 +43,25 @@ namespace SMS_2._0
             }
         }
 
+        private void userLoginBttn_Click(object sender, EventArgs e)
+        {
+            if (usernameTXTBX.Text != "" && passwordTXTBX.Text != "")
+            {
+                Database database = new Database();
+                if (database.CashierCheckIn(usernameTXTBX.Text, passwordTXTBX.Text) == true)
+                {
+                    CashierView childForm = new CashierView();
+                    childForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Try again!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fill the information! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

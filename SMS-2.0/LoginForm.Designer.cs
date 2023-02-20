@@ -89,6 +89,7 @@
             this.userLoginBttn.TabIndex = 5;
             this.userLoginBttn.Text = "User";
             this.userLoginBttn.UseVisualStyleBackColor = false;
+            this.userLoginBttn.Click += new System.EventHandler(this.userLoginBttn_Click);
             // 
             // adminLoginBttn
             // 

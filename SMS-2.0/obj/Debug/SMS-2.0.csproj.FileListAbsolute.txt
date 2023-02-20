@@ -56,3 +56,4 @@ C:\Users\Georgi\Source\Repos\GeorgiKatsarov\sms\SMS-2.0\obj\Debug\SMS_2._0.AddSt
 C:\Users\Georgi\Source\Repos\GeorgiKatsarov\sms\SMS-2.0\obj\Debug\SMS_2._0.AddCashier.resources
 C:\Users\Georgi\Source\Repos\GeorgiKatsarov\sms\SMS-2.0\obj\Debug\SMS_2._0.RemoveCashier.resources
 C:\Users\Georgi\Source\Repos\GeorgiKatsarov\sms\SMS-2.0\obj\Debug\SMS_2._0.RemoveStock.resources
+C:\Users\Georgi\Source\Repos\GeorgiKatsarov\sms\SMS-2.0\obj\Debug\SMS_2._0.CashierView.resources

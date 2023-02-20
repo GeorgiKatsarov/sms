@@ -129,7 +129,61 @@ namespace SMS_2._0
             }
 
         }
-       
+        /// <summary>
+        ///  This method is used for the login of cashiers
+        /// </summary>
+        /// <param name="firsName"></param>
+        /// <param name="lastName"></param>
+        /// <returns></returns>
+        public bool CashierCheckIn(string firsName, string lastName)
+        {
+
+            string query = $"select * from sms.cashiers where firstName = '{firsName}' and lastName = '{lastName}'";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                try
+                {
+                    // Create Command
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    //Read the data and store them in the list
+                    if (dataReader.Read())
+                    {
+                        MessageBox.Show("Welcome, cashier!", "Successfully logged", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Wrong given information! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+
+                    //return value
+                    return true;
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Wrong given information! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid inputs! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+        }
+
         /// <summary>
         /// This method is used for running different queries.
         /// </summary>
@@ -212,6 +266,58 @@ namespace SMS_2._0
             }
 
         }
+
+        public Product Product(int id, int quantity)
+        {
+            Product returnProduct = new Product();
+            string query = $"select * from sms.stock where id = {id}";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                try
+                {
+                    // Create Command
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    //Read the data and store them in the list
+                    if (dataReader.Read())
+                    {
+                        returnProduct.Id = int.Parse(dataReader["id"].ToString());
+                        returnProduct.Name = dataReader["name"].ToString();
+                        returnProduct.Quantity = quantity;
+                        returnProduct.Price = decimal.Parse(dataReader["price"].ToString());
+                        return returnProduct;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return returnProduct;
+                    }
+
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+
+                    return returnProduct;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return returnProduct;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return returnProduct;
+            }
+
+        }
+
 
     }
     }
