@@ -163,12 +163,13 @@ namespace SMS_2._0
         }
 
         /// <summary>
-        /// This method is used for running different queries.
+        /// This method is used for getting the quantity of stock.
         /// </summary>
 
-        public int RunIntResultQuery(string query)
+        public int GetQuantity(int id)
         {
-            int r1 = new int();
+            int quantity = 0;
+            string query = $"select quantity from sms.stock where id = {id}";
             //Open connection
             if (this.OpenConnection() == true)
             {
@@ -176,38 +177,46 @@ namespace SMS_2._0
                 {
                     // Create Command
                     MySqlCommand cmd = new MySqlCommand(query, connection);
-                    object result = cmd.ExecuteScalar();
-                    if (result != null)
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    //Read the data and store them in the list
+                    if (dataReader.Read())
                     {
-                        int r = Convert.ToInt32(result);
-                        //close Connection
-                        this.CloseConnection();
-                        return r;
+                        quantity = dataReader.GetInt32(0);
                     }
                     else
                     {
-                        //close Connection
-                        this.CloseConnection();
-                        return r1;
+                        MessageBox.Show("Something went wrong! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
+
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+
+                    return quantity;
+
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return r1;
+                    return 0;
                 }
             }
             else
             {
                 MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return r1;
+                return 0;
             }
-            
 
         }
+
     }
-}
+    }
+
+
 
 
 

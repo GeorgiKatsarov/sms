@@ -20,7 +20,12 @@ namespace SMS_2._0
         private void RemoveStockBttn_Click(object sender, EventArgs e)
         {
            Database database = new Database();
-            database.RunQuery($"DELETE FROM `stock` WHERE `stock`.`id` = {int.Parse(idTXTBOX.Text)}");
+            int newQuantity = database.GetQuantity(int.Parse(idTXTBOX.Text)) - int.Parse(quantityTXTBOX.Text);
+            database.RunQuery($"UPDATE stock SET quantity = {newQuantity} WHERE stock.id = {idTXTBOX.Text}");
+            if (database.GetQuantity(int.Parse(idTXTBOX.Text)) == 0)
+            {
+                database.RunQuery($"DELETE FROM `stock` WHERE `stock`.`id` = {int.Parse(idTXTBOX.Text)}");
+            }
             this.Close();
         }
     }
