@@ -87,7 +87,7 @@
             this.userLoginBttn.Name = "userLoginBttn";
             this.userLoginBttn.Size = new System.Drawing.Size(171, 62);
             this.userLoginBttn.TabIndex = 5;
-            this.userLoginBttn.Text = "User";
+            this.userLoginBttn.Text = "Cashier";
             this.userLoginBttn.UseVisualStyleBackColor = false;
             this.userLoginBttn.Click += new System.EventHandler(this.userLoginBttn_Click);
             // 

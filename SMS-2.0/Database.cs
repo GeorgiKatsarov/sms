@@ -190,6 +190,7 @@ namespace SMS_2._0
 
         public void RunQuery(string query)
         {
+
             //Open connection
             if (this.OpenConnection() == true)
             {

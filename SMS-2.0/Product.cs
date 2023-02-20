@@ -10,7 +10,7 @@ namespace SMS_2._0
     {
         private int id;
         private string name;
-        private decimal quantity;
+        private int quantity;
         private decimal price;
         
         public int Id
@@ -24,7 +24,7 @@ namespace SMS_2._0
             get { return name; }
             set { name = value; }
         }
-        public decimal Quantity
+        public int Quantity
         {
             get { return quantity; }
             set { quantity = value; }

@@ -96,6 +96,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "RemoveStock";
             this.Text = "RemoveStock";
+            this.Load += new System.EventHandler(this.RemoveStock_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -38,5 +38,10 @@ namespace SMS_2._0
             }
           
         }
+
+        private void RemoveStock_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
