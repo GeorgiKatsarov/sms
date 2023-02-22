@@ -61,5 +61,16 @@ namespace SMS_2._0
             RemoveStock removeStock = new RemoveStock();
             removeStock.Show();
         }
+
+        private void addMore_Click(object sender, EventArgs e)
+        {
+            AddMore childForm = new AddMore();
+            childForm.Show();
+        }
+
+        private void backBTTN_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -27,18 +27,28 @@ namespace SMS_2._0
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if (int.Parse(quantityTXTBOX.Text) > 0)
+            if (idTXTBOX.Text != "" && quantityTXTBOX.Text != "")
             {
-                Database database = new Database();
-                Product product = database.Product(int.Parse(idTXTBOX.Text), int.Parse(quantityTXTBOX.Text));
-                products.Add(product);            
+                if (int.Parse(quantityTXTBOX.Text) > 0)
+                {
+                    Database database = new Database();
+                    Product product = database.Product(int.Parse(idTXTBOX.Text), int.Parse(quantityTXTBOX.Text));
+                    products.Add(product);
+                }
+                else
+                {
+                    MessageBox.Show("Quantity must be positive");
+                }
+                idTXTBOX.Text = "";
+                quantityTXTBOX.Text = "";
             }
             else
             {
-                MessageBox.Show("Quantity must be positive");
-            } 
-            idTXTBOX.Text = "";
-            quantityTXTBOX.Text = "";
+                MessageBox.Show("You have to fill both text boxes");
+                idTXTBOX.Text = "";
+                quantityTXTBOX.Text = "";
+            }
+            
         }
 
         private void finaliseButton_Click(object sender, EventArgs e)
@@ -64,6 +74,9 @@ namespace SMS_2._0
             MessageBox.Show(receipt.ToString());
             
             products.Clear();
+            CashierView cashierView = new CashierView();
+            cashierView.Show();
+            this.Close();
         }
     }
 }

@@ -1,0 +1,5 @@
+C:\Users\Georgi\Desktop\SMS\obj\Debug\net6.0\SMS.csproj.AssemblyReference.cache
+C:\Users\Georgi\Desktop\SMS\obj\Debug\net6.0\SMS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Georgi\Desktop\SMS\obj\Debug\net6.0\SMS.AssemblyInfoInputs.cache
+C:\Users\Georgi\Desktop\SMS\obj\Debug\net6.0\SMS.AssemblyInfo.cs
+C:\Users\Georgi\Desktop\SMS\obj\Debug\net6.0\SMS.csproj.CoreCompileInputs.cache

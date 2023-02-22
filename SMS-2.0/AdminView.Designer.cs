@@ -50,6 +50,8 @@
             this.smsDataSet1 = new SMS_2._0.smsDataSet1();
             this.stockTableAdapter = new SMS_2._0.smsDataSet2TableAdapters.stockTableAdapter();
             this.cashiersTableAdapter = new SMS_2._0.smsDataSet1TableAdapters.cashiersTableAdapter();
+            this.addMore = new System.Windows.Forms.Button();
+            this.backBTTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smsDataSet2)).BeginInit();
@@ -245,12 +247,37 @@
             // 
             this.cashiersTableAdapter.ClearBeforeFill = true;
             // 
+            // addMore
+            // 
+            this.addMore.BackColor = System.Drawing.Color.AliceBlue;
+            this.addMore.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMore.Location = new System.Drawing.Point(775, 331);
+            this.addMore.Name = "addMore";
+            this.addMore.Size = new System.Drawing.Size(143, 113);
+            this.addMore.TabIndex = 10;
+            this.addMore.Text = "Add more of an existing product\r\n";
+            this.addMore.UseVisualStyleBackColor = false;
+            this.addMore.Click += new System.EventHandler(this.addMore_Click);
+            // 
+            // backBTTN
+            // 
+            this.backBTTN.BackColor = System.Drawing.Color.AliceBlue;
+            this.backBTTN.Location = new System.Drawing.Point(775, 468);
+            this.backBTTN.Name = "backBTTN";
+            this.backBTTN.Size = new System.Drawing.Size(143, 113);
+            this.backBTTN.TabIndex = 11;
+            this.backBTTN.Text = "Back";
+            this.backBTTN.UseVisualStyleBackColor = false;
+            this.backBTTN.Click += new System.EventHandler(this.backBTTN_Click);
+            // 
             // AdminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(959, 615);
+            this.Controls.Add(this.backBTTN);
+            this.Controls.Add(this.addMore);
             this.Controls.Add(this.CashierDataGridView);
             this.Controls.Add(this.StockDataGridView);
             this.Controls.Add(this.removeCashierBttn);
@@ -263,7 +290,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(981, 671);
             this.MinimumSize = new System.Drawing.Size(981, 671);
-           /// this.Name = "AdminView";
+            ///this.Name = "AdminView";
             this.Load += new System.EventHandler(this.AdminView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
@@ -297,5 +324,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button addMore;
+        private System.Windows.Forms.Button backBTTN;
     }
 }
