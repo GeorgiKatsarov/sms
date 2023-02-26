@@ -12,6 +12,7 @@ namespace SMS_2._0
         private string name;
         private int quantity;
         private decimal price;
+        private decimal deliveryPrice;
         
         public int Id
         {
@@ -34,5 +35,12 @@ namespace SMS_2._0
             get { return price; }
             set { price = value; }
         }
+        public decimal DeliveryPrice
+        {
+            get { return deliveryPrice; }
+            set { deliveryPrice = value; }
+        }
+
+
     }
 }

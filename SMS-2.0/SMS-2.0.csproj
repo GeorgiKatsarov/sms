@@ -117,6 +117,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>smsDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="smsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smsDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCashier.resx">
       <DependentUpon>AddCashier.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +196,17 @@
     </None>
     <None Include="smsDataSet2.xss">
       <DependentUpon>smsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet3.xsc">
+      <DependentUpon>smsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smsDataSet3.xss">
+      <DependentUpon>smsDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

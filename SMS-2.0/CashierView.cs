@@ -16,8 +16,8 @@ namespace SMS_2._0
         List<Product> products;
         public CashierView()
         {
-           products = new List<Product>();
-           InitializeComponent();
+            products = new List<Product>();
+            InitializeComponent();
         }
 
         private void CashierView_Load(object sender, EventArgs e)
@@ -29,16 +29,11 @@ namespace SMS_2._0
         {
             if (idTXTBOX.Text != "" && quantityTXTBOX.Text != "")
             {
-                if (int.Parse(quantityTXTBOX.Text) > 0)
-                {
-                    Database database = new Database();
-                    Product product = database.Product(int.Parse(idTXTBOX.Text), int.Parse(quantityTXTBOX.Text));
-                    products.Add(product);
-                }
-                else
-                {
-                    MessageBox.Show("Quantity must be positive");
-                }
+                Database database = new Database();
+                Product product = database.Product(int.Parse(idTXTBOX.Text), int.Parse(quantityTXTBOX.Text));
+                products.Add(product);
+
+
                 idTXTBOX.Text = "";
                 quantityTXTBOX.Text = "";
             }
@@ -48,7 +43,7 @@ namespace SMS_2._0
                 idTXTBOX.Text = "";
                 quantityTXTBOX.Text = "";
             }
-            
+
         }
 
         private void finaliseButton_Click(object sender, EventArgs e)
@@ -60,19 +55,15 @@ namespace SMS_2._0
             receipt.AppendLine("------------------------------");
             foreach (var item in products)
             {
-                total += item.Price*item.Quantity;
+                total += item.Price * item.Quantity;
                 receipt.AppendLine($"{item.Id} -- {item.Name} -- {item.Quantity} -- {item.Price}");
                 int newQuantity = database.GetQuantity(item.Id);
                 newQuantity -= item.Quantity;
                 database.RunQuery($"UPDATE stock SET quantity = {newQuantity} WHERE stock.id = {item.Id}");
-                if (database.GetQuantity(item.Id) == 0)
-                {
-                    database.RunQuery($"DELETE FROM `stock` WHERE `stock`.`id` = {item.Id}");
-                }
             }
             receipt.AppendLine($"Your total is {total:f2}BGN");
             MessageBox.Show(receipt.ToString());
-            
+
             products.Clear();
             CashierView cashierView = new CashierView();
             cashierView.Show();

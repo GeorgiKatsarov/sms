@@ -36,6 +36,8 @@
             this.nameTXTBOX = new System.Windows.Forms.TextBox();
             this.quantityTXTBOX = new System.Windows.Forms.TextBox();
             this.priceTXTBOX = new System.Windows.Forms.TextBox();
+            this.deliveryPriceTXTBOX = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addStockBttn
@@ -53,7 +55,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 55);
+            this.label1.Location = new System.Drawing.Point(65, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 32);
             this.label1.TabIndex = 1;
@@ -63,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 123);
+            this.label2.Location = new System.Drawing.Point(32, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 32);
             this.label2.TabIndex = 2;
@@ -73,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 181);
+            this.label3.Location = new System.Drawing.Point(65, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 32);
             this.label3.TabIndex = 3;
@@ -82,7 +84,7 @@
             // 
             // nameTXTBOX
             // 
-            this.nameTXTBOX.Location = new System.Drawing.Point(162, 55);
+            this.nameTXTBOX.Location = new System.Drawing.Point(173, 40);
             this.nameTXTBOX.Name = "nameTXTBOX";
             this.nameTXTBOX.Size = new System.Drawing.Size(372, 40);
             this.nameTXTBOX.TabIndex = 4;
@@ -90,7 +92,7 @@
             // 
             // quantityTXTBOX
             // 
-            this.quantityTXTBOX.Location = new System.Drawing.Point(162, 120);
+            this.quantityTXTBOX.Location = new System.Drawing.Point(173, 108);
             this.quantityTXTBOX.Name = "quantityTXTBOX";
             this.quantityTXTBOX.Size = new System.Drawing.Size(372, 40);
             this.quantityTXTBOX.TabIndex = 5;
@@ -98,11 +100,27 @@
             // 
             // priceTXTBOX
             // 
-            this.priceTXTBOX.Location = new System.Drawing.Point(162, 178);
+            this.priceTXTBOX.Location = new System.Drawing.Point(173, 166);
             this.priceTXTBOX.Name = "priceTXTBOX";
             this.priceTXTBOX.Size = new System.Drawing.Size(372, 40);
             this.priceTXTBOX.TabIndex = 6;
             this.priceTXTBOX.TextChanged += new System.EventHandler(this.priceTXTBOX_TextChanged);
+            // 
+            // deliveryPriceTXTBOX
+            // 
+            this.deliveryPriceTXTBOX.Location = new System.Drawing.Point(173, 219);
+            this.deliveryPriceTXTBOX.Name = "deliveryPriceTXTBOX";
+            this.deliveryPriceTXTBOX.Size = new System.Drawing.Size(372, 40);
+            this.deliveryPriceTXTBOX.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(-5, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(172, 32);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Delivery price:";
             // 
             // AddStock
             // 
@@ -111,6 +129,8 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(623, 339);
+            this.Controls.Add(this.deliveryPriceTXTBOX);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.priceTXTBOX);
             this.Controls.Add(this.quantityTXTBOX);
             this.Controls.Add(this.nameTXTBOX);
@@ -138,5 +158,7 @@
         private System.Windows.Forms.TextBox nameTXTBOX;
         private System.Windows.Forms.TextBox quantityTXTBOX;
         private System.Windows.Forms.TextBox priceTXTBOX;
+        private System.Windows.Forms.TextBox deliveryPriceTXTBOX;
+        private System.Windows.Forms.Label label4;
     }
 }

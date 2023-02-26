@@ -19,24 +19,14 @@ namespace SMS_2._0
 
         private void RemoveStockBttn_Click(object sender, EventArgs e)
         {
-            if (int.Parse(quantityTXTBOX.Text) > 0 )
-            {
-                Database database = new Database();
-                int newQuantity = database.GetQuantity(int.Parse(idTXTBOX.Text)) - int.Parse(quantityTXTBOX.Text);
-                database.RunQuery($"UPDATE stock SET quantity = {newQuantity} WHERE stock.id = {idTXTBOX.Text}");
-                if (database.GetQuantity(int.Parse(idTXTBOX.Text)) == 0)
-                {
-                    database.RunQuery($"DELETE FROM `stock` WHERE `stock`.`id` = {int.Parse(idTXTBOX.Text)}");
-                }
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Quantity must be positive");
-                quantityTXTBOX.Text = "";
-                idTXTBOX.Text = "";
-            }
-          
+            Database database = new Database();
+            int newQuantity = database.GetQuantity(int.Parse(idTXTBOX.Text)) - int.Parse(quantityTXTBOX.Text);
+            database.RunQuery($"UPDATE stock SET quantity = {newQuantity} WHERE stock.id = {idTXTBOX.Text}");
+            Database database1 = new Database();
+            database1.RunQuery($"INSERT INTO sms.removedstock (removedProductID, quantityOfProduct) VALUES ('{int.Parse(idTXTBOX.Text)}','{decimal.Parse(quantityTXTBOX.Text)}')");
+            this.Close();
+
+
         }
 
         private void RemoveStock_Load(object sender, EventArgs e)

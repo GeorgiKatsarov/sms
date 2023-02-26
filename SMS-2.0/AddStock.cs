@@ -21,7 +21,7 @@ namespace SMS_2._0
         {
             if (priceTXTBOX.Text != "" && nameTXTBOX.Text != "" && quantityTXTBOX.Text != "" )
             { 
-                string query = $"insert into sms.stock (name, quantity, price) values ('{nameTXTBOX.Text}', {decimal.Parse(quantityTXTBOX.Text)}, {decimal.Parse(priceTXTBOX.Text)} )";
+                string query = $"insert into sms.stock (name, quantity, price, deliveryPrice) values ('{nameTXTBOX.Text}', {decimal.Parse(quantityTXTBOX.Text)}, {decimal.Parse(priceTXTBOX.Text)}, {decimal.Parse(deliveryPriceTXTBOX.Text)} )";
                 Database database = new Database();
                 database.RunQuery(query);
                 this.Close();
