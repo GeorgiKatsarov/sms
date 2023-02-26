@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\obj",
     "\\SMS-2.0"
   ],
-  "SelectedNode": "\\SMS-2.0\\RemoveStock.cs",
+  "SelectedNode": "\\SMS-2.0\\Product.cs",
   "PreviewInSolutionExplorer": false
 }
