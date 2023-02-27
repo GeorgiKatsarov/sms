@@ -49,6 +49,7 @@ namespace SMS_2._0
         private void finaliseButton_Click(object sender, EventArgs e)
         {
             Database database = new Database();
+            Database database1 = new Database();
             decimal total = new decimal();
             StringBuilder receipt = new StringBuilder();
             receipt.AppendLine("Thank you for shoping with us");
@@ -60,7 +61,9 @@ namespace SMS_2._0
                 int newQuantity = database.GetQuantity(item.Id);
                 newQuantity -= item.Quantity;
                 database.RunQuery($"UPDATE stock SET quantity = {newQuantity} WHERE stock.id = {item.Id}");
+                database.RunQuery($"INSERT INTO sms.soldstock (soldProductID, quantity) VALUES( '{item.Id}', '{item.Quantity}')");
             }
+
             receipt.AppendLine($"Your total is {total:f2}BGN");
             MessageBox.Show(receipt.ToString());
 

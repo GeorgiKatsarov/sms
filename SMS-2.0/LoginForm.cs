@@ -41,7 +41,8 @@ namespace SMS_2._0
             {
                 MessageBox.Show("Fill the information! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            adminLoginBttn.Text = "";
+           passwordTXTBX.Text = "";
+            usernameTXTBX.Text = "";
         }
 
         private void userLoginBttn_Click(object sender, EventArgs e)
@@ -63,7 +64,8 @@ namespace SMS_2._0
             {
                 MessageBox.Show("Fill the information! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            userLoginBttn.Text = "";
+            passwordTXTBX.Text = "";
+            usernameTXTBX.Text = "";
         }
     }
 }
