@@ -24,6 +24,7 @@ namespace SMS_2._0
                 Database database = new Database();
                 int newQuantity = database.GetQuantity(int.Parse(idTXTBOX.Text)) + int.Parse(quantityTXTBOX.Text);
                 database.RunQuery($"UPDATE stock SET quantity = {newQuantity} WHERE stock.id = {idTXTBOX.Text}");
+                database.RunQuery($"INSERT INTO sms.newdelivery (deliveryProductId, quantity) VALUES ('{int.Parse(idTXTBOX.Text)}', '{ int.Parse(quantityTXTBOX.Text)}')");
                 this.Close();
             }
             else

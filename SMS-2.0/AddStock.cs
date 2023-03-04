@@ -24,6 +24,8 @@ namespace SMS_2._0
                 string query = $"insert into sms.stock (name, quantity, price, deliveryPrice) values ('{nameTXTBOX.Text}', {decimal.Parse(quantityTXTBOX.Text)}, {decimal.Parse(priceTXTBOX.Text)}, {decimal.Parse(deliveryPriceTXTBOX.Text)} )";
                 Database database = new Database();
                 database.RunQuery(query);
+                int id = database.GetId();
+                database.RunQuery($"insert into sms.addedstock (addedProductId, quantity) values ('{id}',{int.Parse(quantityTXTBOX.Text)} )");
                 this.Close();
             }
             else

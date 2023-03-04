@@ -319,6 +319,51 @@ namespace SMS_2._0
 
         }
 
+        public int GetId()
+        {
+            int id = 0;
+            string query = "select id from sms.stock order by id desc limit 1";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                try
+                {
+                    // Create Command
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    //Read the data and store them in the list
+                    if (dataReader.Read())
+                    {
+                        id = dataReader.GetInt32(0);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+
+                    return id;
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return 0;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+        }
 
     }
     }

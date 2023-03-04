@@ -123,3 +123,4 @@ C:\Users\Georgi\Desktop\SMS-3\SMS-2.0\obj\Debug\SMS-2.0.csproj.CoreCompileInputs
 C:\Users\Georgi\Desktop\SMS-3\SMS-2.0\obj\Debug\SMS-2.0.csproj.CopyComplete
 C:\Users\Georgi\Desktop\SMS-3\SMS-2.0\obj\Debug\SMS-2.0.exe
 C:\Users\Georgi\Desktop\SMS-3\SMS-2.0\obj\Debug\SMS-2.0.pdb
+C:\Users\Georgi\Desktop\SMS-3\SMS-2.0\obj\Debug\SMS_2._0.MoreOfAdminView.resources

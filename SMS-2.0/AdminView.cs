@@ -70,9 +70,10 @@ namespace SMS_2._0
             childForm.Show();
         }
 
-        private void backBTTN_Click(object sender, EventArgs e)
+        private void moreBTTN_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            MoreOfAdminView moreOfAdminView = new MoreOfAdminView();
+            moreOfAdminView.Show();
         }
     }
 }

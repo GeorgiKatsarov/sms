@@ -49,7 +49,6 @@ namespace SMS_2._0
         private void finaliseButton_Click(object sender, EventArgs e)
         {
             Database database = new Database();
-            Database database1 = new Database();
             decimal total = new decimal();
             StringBuilder receipt = new StringBuilder();
             receipt.AppendLine("Thank you for shoping with us");

@@ -81,6 +81,12 @@
     <Compile Include="AddStock.Designer.cs">
       <DependentUpon>AddStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoreOfAdminView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreOfAdminView.Designer.cs">
+      <DependentUpon>MoreOfAdminView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,7 @@
     <Compile Include="RemoveStock.Designer.cs">
       <DependentUpon>RemoveStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sale.cs" />
     <Compile Include="smsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,6 +129,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>smsDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="smsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smsDataSet5.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCashier.resx">
       <DependentUpon>AddCashier.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreOfAdminView.resx">
+      <DependentUpon>MoreOfAdminView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -207,6 +227,28 @@
     </None>
     <None Include="smsDataSet3.xss">
       <DependentUpon>smsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet4.xsc">
+      <DependentUpon>smsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smsDataSet4.xss">
+      <DependentUpon>smsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet5.xsc">
+      <DependentUpon>smsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smsDataSet5.xss">
+      <DependentUpon>smsDataSet5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
