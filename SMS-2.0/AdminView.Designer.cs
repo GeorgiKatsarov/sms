@@ -56,6 +56,7 @@
             this.addMore = new System.Windows.Forms.Button();
             this.moreBTTN = new System.Windows.Forms.Button();
             this.stockTableAdapter1 = new SMS_2._0.smsDataSet3TableAdapters.stockTableAdapter();
+            this.AccountingBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.smsDataSet3)).BeginInit();
@@ -277,7 +278,7 @@
             // 
             this.addMore.BackColor = System.Drawing.Color.AliceBlue;
             this.addMore.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addMore.Location = new System.Drawing.Point(775, 331);
+            this.addMore.Location = new System.Drawing.Point(775, 303);
             this.addMore.Name = "addMore";
             this.addMore.Size = new System.Drawing.Size(143, 113);
             this.addMore.TabIndex = 10;
@@ -288,7 +289,7 @@
             // moreBTTN
             // 
             this.moreBTTN.BackColor = System.Drawing.Color.AliceBlue;
-            this.moreBTTN.Location = new System.Drawing.Point(775, 468);
+            this.moreBTTN.Location = new System.Drawing.Point(775, 422);
             this.moreBTTN.Name = "moreBTTN";
             this.moreBTTN.Size = new System.Drawing.Size(143, 113);
             this.moreBTTN.TabIndex = 11;
@@ -300,12 +301,24 @@
             // 
             this.stockTableAdapter1.ClearBeforeFill = true;
             // 
+            // AccountingBttn
+            // 
+            this.AccountingBttn.BackColor = System.Drawing.Color.AliceBlue;
+            this.AccountingBttn.Location = new System.Drawing.Point(738, 541);
+            this.AccountingBttn.Name = "AccountingBttn";
+            this.AccountingBttn.Size = new System.Drawing.Size(209, 62);
+            this.AccountingBttn.TabIndex = 12;
+            this.AccountingBttn.Text = "Accounting";
+            this.AccountingBttn.UseVisualStyleBackColor = false;
+            this.AccountingBttn.Click += new System.EventHandler(this.AccountingBttn_Click);
+            // 
             // AdminView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(959, 615);
+            this.Controls.Add(this.AccountingBttn);
             this.Controls.Add(this.moreBTTN);
             this.Controls.Add(this.addMore);
             this.Controls.Add(this.CashierDataGridView);
@@ -320,7 +333,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximumSize = new System.Drawing.Size(981, 671);
             this.MinimumSize = new System.Drawing.Size(981, 671);
-            ///this.Name = "AdminView";
+          ///  this.Name = "AdminView";
             this.Load += new System.EventHandler(this.AdminView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StockDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource1)).EndInit();
@@ -362,5 +375,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliveryPrice;
+        private System.Windows.Forms.Button AccountingBttn;
     }
 }

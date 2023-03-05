@@ -33,6 +33,11 @@ namespace SMS_2._0
             get { return time; }
             set { time = value; }
         }
+        public Sale ()
+        {
+            Database database = new Database ();
+            this.Product = database.Product(this.IdOfProduct);
+        }
 
     }
 }

@@ -81,6 +81,12 @@
     <Compile Include="AddStock.Designer.cs">
       <DependentUpon>AddStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounting.Designer.cs">
+      <DependentUpon>Accounting.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoreOfAdminView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>smsDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="smsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smsDataSet6.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCashier.resx">
       <DependentUpon>AddCashier.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CashierView.resx">
       <DependentUpon>CashierView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting.resx">
+      <DependentUpon>Accounting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -249,6 +263,17 @@
     </None>
     <None Include="smsDataSet5.xss">
       <DependentUpon>smsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet6.xsc">
+      <DependentUpon>smsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="smsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smsDataSet6.xss">
+      <DependentUpon>smsDataSet6.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

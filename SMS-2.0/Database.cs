@@ -364,9 +364,59 @@ namespace SMS_2._0
                 return 0;
             }
         }
+        public Product Product(int id)
+        {
+            Product returnProduct = new Product();
+            string query = $"select * from sms.stock where id = {id}";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                try
+                {
+                    // Create Command
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    //Read the data and store them in the list
+                    if (dataReader.Read())
+                    {
+                        returnProduct.Id = int.Parse(dataReader["id"].ToString());
+                        returnProduct.Name = dataReader["name"].ToString();
+                        returnProduct.Price = decimal.Parse(dataReader["price"].ToString());
+                        return returnProduct;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Something went wrong! Please, try again!", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return returnProduct;
+                    }
+
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+
+                    return returnProduct;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return returnProduct;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return returnProduct;
+            }
+
+        }
+
 
     }
-    }
+}
 
 
 

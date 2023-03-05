@@ -75,5 +75,11 @@ namespace SMS_2._0
             MoreOfAdminView moreOfAdminView = new MoreOfAdminView();
             moreOfAdminView.Show();
         }
+
+        private void AccountingBttn_Click(object sender, EventArgs e)
+        {
+            Accounting accounting = new Accounting();
+            accounting.Show();
+        }
     }
 }
