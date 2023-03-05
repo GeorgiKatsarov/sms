@@ -289,6 +289,7 @@ namespace SMS_2._0
                         returnProduct.Name = dataReader["name"].ToString();
                         returnProduct.Quantity = quantity;
                         returnProduct.Price = decimal.Parse(dataReader["price"].ToString());
+                        returnProduct.DeliveryPrice = decimal.Parse(dataReader["deliveryPrice"].ToString());
                         return returnProduct;
                     }
                     else
@@ -384,6 +385,7 @@ namespace SMS_2._0
                         returnProduct.Id = int.Parse(dataReader["id"].ToString());
                         returnProduct.Name = dataReader["name"].ToString();
                         returnProduct.Price = decimal.Parse(dataReader["price"].ToString());
+                        returnProduct.DeliveryPrice = decimal.Parse(dataReader["deliveryPrice"].ToString());
                         return returnProduct;
                     }
                     else

@@ -37,10 +37,17 @@ namespace SMS_2._0
                 Database database2 = new Database();
                 item.Value.Product = database2.Product(item.Value.IdOfProduct);
                 sales += item.Value.Product.Price * item.Value.Quantity;
-                slimProfit += item.Value.Product.DeliveryPrice * item.Value.Quantity;
+                profit += (item.Value.Product.Price - item.Value.Product.DeliveryPrice) * item.Value.Quantity;
             }
-            profit = sales - slimProfit;
-            profitPercentage = (profit / sales);
+            try
+            {
+                profitPercentage = (100 * profit) / sales ;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong!");
+            }
+            
             Database database1 = new Database();
             database1.RunQuery($"INSERT INTO sms.profits (sales, netProfit, profitPercentage) VALUES('{sales}', '{profit}', '{profitPercentage}')");
             Accounting accounting = new Accounting();
