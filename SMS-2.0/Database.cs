@@ -214,7 +214,7 @@ namespace SMS_2._0
             {
                 MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         /// <summary>
@@ -395,8 +395,8 @@ namespace SMS_2._0
                     //close Data Reader
                     dataReader.Close();
 
-                    //close Connection
                     this.CloseConnection();
+                    
 
                     return returnProduct;
                 }
@@ -414,6 +414,50 @@ namespace SMS_2._0
 
         }
 
+        public Dictionary<int, Sale> Sales()
+        {
+            Dictionary<int, Sale> result = new Dictionary<int, Sale>();
+            string query = $"SELECT * FROM sms.soldstock WHERE dateOfSale > (SELECT date from profits order by date desc limit 1)";
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                try
+                {
+                    // Create Command
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    //Create a data reader and Execute the command
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+                    int id = 1;
+                    //Read the data and store them in the list
+                    while (dataReader.Read())
+                    {
+                        Sale sale = new Sale();
+                        sale.IdOfProduct = int.Parse(dataReader["soldProductID"].ToString());
+                        sale.Quantity = int.Parse(dataReader["quantity"].ToString());
+                        result.Add(id, sale);
+                        id += 1;  
+                    }
+                    //close Data Reader
+                    dataReader.Close();
+
+                    //close Connection
+                    this.CloseConnection();
+
+                    return result;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return result;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Could not reach server", "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return result;
+            }
+
+        }
 
     }
 }

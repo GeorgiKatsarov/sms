@@ -11,7 +11,6 @@ namespace SMS_2._0
         private int idOfProduct;
         private Product product;
         private int quantity;
-        private DateTime time;
 
         public int IdOfProduct
         {
@@ -28,15 +27,10 @@ namespace SMS_2._0
             get { return quantity; }
             set { quantity = value; }
         }
-        private DateTime Time
-        {
-            get { return time; }
-            set { time = value; }
-        }
+        
+
         public Sale ()
         {
-            Database database = new Database ();
-            this.Product = database.Product(this.IdOfProduct);
         }
 
     }
