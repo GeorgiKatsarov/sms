@@ -79,6 +79,7 @@
             this.passwordTXTBX.Name = "passwordTXTBX";
             this.passwordTXTBX.Size = new System.Drawing.Size(225, 40);
             this.passwordTXTBX.TabIndex = 4;
+            this.passwordTXTBX.UseSystemPasswordChar = true;
             // 
             // userLoginBttn
             // 
