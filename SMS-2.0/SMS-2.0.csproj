@@ -50,71 +50,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCashier.cs">
+    <Compile Include="View\AddCashier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCashier.Designer.cs">
+    <Compile Include="View\AddCashier.Designer.cs">
       <DependentUpon>AddCashier.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddMore.cs">
+    <Compile Include="View\AddMore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddMore.designer.cs">
+    <Compile Include="View\AddMore.designer.cs">
       <DependentUpon>AddMore.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminView.cs">
+    <Compile Include="View\AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminView.Designer.cs">
+    <Compile Include="View\AdminView.Designer.cs">
       <DependentUpon>AdminView.cs</DependentUpon>
     </Compile>
-    <Compile Include="CashierView.cs">
+    <Compile Include="View\CashierView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CashierView.Designer.cs">
+    <Compile Include="View\CashierView.Designer.cs">
       <DependentUpon>CashierView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs" />
-    <Compile Include="AddStock.cs">
+    <Compile Include="Model\Database.cs" />
+    <Compile Include="View\AddStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStock.Designer.cs">
+    <Compile Include="View\AddStock.Designer.cs">
       <DependentUpon>AddStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Accounting.cs">
+    <Compile Include="View\Accounting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Accounting.Designer.cs">
+    <Compile Include="View\Accounting.Designer.cs">
       <DependentUpon>Accounting.cs</DependentUpon>
     </Compile>
-    <Compile Include="MoreOfAdminView.cs">
+    <Compile Include="View\MoreOfAdminView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MoreOfAdminView.Designer.cs">
+    <Compile Include="View\MoreOfAdminView.Designer.cs">
       <DependentUpon>MoreOfAdminView.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="View\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Controller\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoveCashier.cs">
+    <Compile Include="View\RemoveCashier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveCashier.Designer.cs">
+    <Compile Include="View\RemoveCashier.Designer.cs">
       <DependentUpon>RemoveCashier.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoveStock.cs">
+    <Compile Include="View\RemoveStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoveStock.Designer.cs">
+    <Compile Include="View\RemoveStock.Designer.cs">
       <DependentUpon>RemoveStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sale.cs" />
+    <Compile Include="Model\Sale.cs" />
     <Compile Include="smsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -150,28 +150,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>smsDataSet6.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddCashier.resx">
+    <EmbeddedResource Include="View\AddCashier.resx">
       <DependentUpon>AddCashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddMore.resx">
+    <EmbeddedResource Include="View\AddMore.resx">
       <DependentUpon>AddMore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddStock.resx">
+    <EmbeddedResource Include="View\AddStock.resx">
       <DependentUpon>AddStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminView.resx">
+    <EmbeddedResource Include="View\AdminView.resx">
       <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashierView.resx">
+    <EmbeddedResource Include="View\CashierView.resx">
       <DependentUpon>CashierView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting.resx">
+    <EmbeddedResource Include="View\Accounting.resx">
       <DependentUpon>Accounting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MoreOfAdminView.resx">
+    <EmbeddedResource Include="View\MoreOfAdminView.resx">
       <DependentUpon>MoreOfAdminView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -183,10 +183,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RemoveCashier.resx">
+    <EmbeddedResource Include="View\RemoveCashier.resx">
       <DependentUpon>RemoveCashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoveStock.resx">
+    <EmbeddedResource Include="View\RemoveStock.resx">
       <DependentUpon>RemoveStock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -279,5 +279,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
